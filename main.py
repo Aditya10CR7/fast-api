@@ -1,13 +1,13 @@
 from typing import List
 
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 app = FastAPI()
 
 class Tea(BaseModel):
     id: int
-    name: str
+    email: EmailStr
     origin: str
 
 teas: List[Tea] = []
